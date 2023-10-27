@@ -5,7 +5,8 @@ internal class Program
     private static void Main(string[] args)
     {
         //singleObjectMap();
-
+        
+        
         List<User> users = new List<User>();
         Console.Write("--> list ");
         for (int i = 0; i < 10; i++)
@@ -14,6 +15,7 @@ internal class Program
             users.Add(user);
         }
         Console.WriteLine("<--");
+      
 
         Console.Write("--> map ");
         var userResponse = Mapper.Map<IEnumerable<UserResponse>>(users);
@@ -36,14 +38,13 @@ internal class Program
             LastName = "test lastname",
         };
 
-
         var user = Mapper.Map<UserResponse>(u);
-
+        
         Console.WriteLine(user.Name);
         Console.WriteLine(user.LastName);
     }
 }
-public class User
+public class User 
 {
     public int id { get; set; }
     public string Name { get; set; }
