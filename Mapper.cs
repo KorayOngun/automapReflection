@@ -21,7 +21,7 @@ namespace automapReflection
             return (T)item;
         }
 
-        public static T Mapp<T>(IEnumerable obj)
+        public static T Map<T>(IEnumerable obj)
         {
             // obj == new List<User>(){...}
             // ---> T == IEnumerable<UserResponse> 
